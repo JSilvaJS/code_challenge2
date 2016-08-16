@@ -56,6 +56,11 @@ function monsterBattle() {
 					result.textContent = "Dragons Win!";
 	} else if (firstInput === "Dragons" && secondInput === "Wearwolves") {
 					result.textContent = "Wearwolves Win!";
+	} else if (firstInput === "TRex" && secondInput === "Unicorns" ||
+			   firstInput === "TRex" && secondInput === "Dragons") {
+					result.textContent = secondInput + " Wins!";
+	} else if (firstInput === "TRex" && secondInput === "Wearwolves") {
+					result.textContent = "TRex Wins!";
 	}
 
 }

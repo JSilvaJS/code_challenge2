@@ -31,3 +31,33 @@ function TRex(other) {
 		console.log(other + " wins!");
 	}
 }
+
+function monsterBattle() {
+
+	var firstInput = document.getElementById('creatureOne').value;
+	var secondInput = document.getElementById('creatureTwo').value;
+	var result = document.getElementById('result');
+
+	if (firstInput === secondInput) 
+	{
+	result.textContent = 'No one wins!';
+	} else if (firstInput === "Unicorns" && secondInput === "Wearwolves" ||
+			   firstInput === "Unicorns" && secondInput === "TRex") {
+					result.textContent = 'Unicorns Win!';
+	} else if (firstInput === "Unicorns" && secondInput === "Dragons") {
+					result.textContent = "Dragons Win!";
+	} else if (firstInput === "Wearwolves" && secondInput === "Unicorns" ||
+			   firstInput === "Wearwolves" && secondInput === "TRex") {
+					result.textContent = secondInput + " Win!";
+	} else if (firstInput === "Wearwolves" && secondInput === "Dragons") {
+					result.textContent = "Wearwolves Win!";
+	} else if (firstInput === "Dragons" && secondInput === "Unicorns" ||
+			   firstInput === "Dragons" && secondInput === "TRex") {
+					result.textContent = "Dragons Win!";
+	} else if (firstInput === "Dragons" && secondInput === "Wearwolves") {
+					result.textContent = "Wearwolves Win!";
+	}
+
+}
+
+submitButton.addEventListener('click', monsterBattle);
